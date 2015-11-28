@@ -2,7 +2,6 @@ $(document).ready(function(){
 	jQuery(function($){
 		
 		$.supersized({
-		
 			// Functionality
 			slideshow               :   1,			// Slideshow on/off
 			autoplay				:	1,			// Slideshow starts playing automatically
@@ -32,16 +31,13 @@ $(document).ready(function(){
 			thumb_links				:	0,			// Individual thumb links for each slide
 			thumbnail_navigation    :   0,			// Thumbnail navigation
 			slides 					:  	[			// Slideshow Images
-												{image : 'assets/img/background/ramen.jpg'}
+												{image : 'http://home.spsostrov.cz/~vaneko/ramenstore/assets/img/background/ramen.jpg'}
 		
 										],
 										
 			// Theme Options			   
 			progress_bar			:	0,			// Timer for each slide							
-			mouse_scrub				:	0
-			
+			mouse_scrub				:	0	
 		});
 	});
-	
-	
 });	
