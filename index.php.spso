@@ -1,0 +1,18 @@
+<?php 
+define("BASE_URL", 'http://' . $_SERVER['SERVER_NAME'] . '/~vaneko');
+
+$request = $_REQUEST['request'];
+$file = __DIR__ . "/pages/" . $request . ".php";
+
+if(!file_exists($file) && $request != ""){
+	header("HTTP/1.0 404 Not Found");
+	echo "<h1>404 Not Found</h1>";
+	echo "The page that you have requested could not be found.";
+	exit();
+}
+
+include_once(__DIR__ . "/parts/parts.php");
+if($request == "") 
+	include_once(__DIR__ . "/pages/index.php");
+else
+	include_once($file);
